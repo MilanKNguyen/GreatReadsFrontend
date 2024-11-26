@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booklist - GreatReads</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header">
+            <div class="logo">
+                <img src="images/greatreadslogo.png" alt="Logo">
+            </div>
+
+            <!-- Search Bar in the Center -->
+            <div class="header-search">
+                <form action="/search" method="GET">
+                    <input type="text" name="query" placeholder="Search books or authors..." required>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+
+            <!-- Buttons on the right -->
+            <div class="header-actions">
+                <!-- Booklist Button -->
+                <a href="/booklist" class="booklist-button">
+                    <img src="images/bookmark.png" alt="Bookmark Icon" class="booklist-icon">
+                    Booklist
+                </a>
+                <!-- Sign In Button -->
+                <a href="/signin" class="signin-button">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Watchlist Page Wrapper -->
+    <div class="watchlist-wrapper">
+        <header class="watchlist-header">
+            <h1>Booklist</h1>
+            <!-- Buttons Wrapper for Add/Edit Book -->
+            <div class="header-buttons">
+                <button class="add-book-button">+ Add Book</button>
+                <button class="edit-book-button">✏️ Edit Book</button>
+            </div>
+        </header>
+
+        <div class="watchlist-grid">
+            <!-- 10 Books -->
+            <div class="book-card">
+                <img src="images/book1.jpg" alt="Book Cover 1">
+                <div class="book-details">
+                    <h3>Book Title 1</h3>
+                    <p>Author: Jane Doe</p>
+                    <p>Rating: ⭐⭐⭐⭐☆</p>
+                </div>
+            </div>
+            <div class="book-card">
+                <img src="images/book2.jpg" alt="Book Cover 2">
+                <div class="book-details">
+                    <h3>Book Title 2</h3>
+                    <p>Author: John Smith</p>
+                    <p>Rating: ⭐⭐⭐⭐⭐</p>
+                </div>
+            </div>
+            <div class="book-card">
+                <img src="images/book3.jpg" alt="Book Cover 3">
+                <div class="book-details">
+                    <h3>Book Title 3</h3>
+                    <p>Author: Alice Brown</p>
+                    <p>Rating: ⭐⭐⭐⭐☆</p>
+                </div>
+            </div>
+            <div class="book-card">
+                <img src="images/book4.jpg" alt="Book Cover 4">
+                <div class="book-details">
+                    <h3>Book Title 4</h3>
+                    <p>Author: Bob Johnson</p>
+                    <p>Rating: ⭐⭐⭐☆</p>
+                </div>
+            </div>
+            <div class="book-card">
+                <img src="images/book5.jpg" alt="Book Cover 5">
+                <div class="book-details">
+                    <h3>Book Title 5</h3>
+                    <p>Author: Emily Clark</p>
+                    <p>Rating: ⭐⭐⭐⭐⭐</p>
+                </div>
+            </div>
+            <div class="book-card">
+                <img src="images/book6.jpg" alt="Book Cover 6">
+                <div class="book-details">
+                    <h3>Book Title 6</h3>
+                    <p>Author: David Lee</p>
+                    <p>Rating: ⭐⭐⭐⭐☆</p>
+                </div>
+            </div>
+            <div class="book-card">
+                <img src="images/book7.jpg" alt="Book Cover 7">
+                <div class="book-details">
+                    <h3>Book Title 7</h3>
+                    <p>Author: Michael Brown</p>
+                    <p>Rating: ⭐⭐⭐⭐☆</p>
+                </div>
+            </div>
+            <div class="book-card">
+                <img src="images/book8.jpg" alt="Book Cover 8">
+                <div class="book-details">
+                    <h3>Book Title 8</h3>
+                    <p>Author: Sarah Johnson</p>
+                    <p>Rating: ⭐⭐⭐☆</p>
+                </div>
+            </div>
+            <div class="book-card">
+                <img src="images/book9.jpg" alt="Book Cover 9">
+                <div class="book-details">
+                    <h3>Book Title 9</h3>
+                    <p>Author: Chris White</p>
+                    <p>Rating: ⭐⭐⭐⭐☆</p>
+                </div>
+            </div>
+            <div class="book-card">
+                <img src="images/book10.jpg" alt="Book Cover 10">
+                <div class="book-details">
+                    <h3>Book Title 10</h3>
+                    <p>Author: Anna Green</p>
+                    <p>Rating: ⭐⭐⭐⭐☆</p>
+                </div>
+            </div>
+        </div>    
+
+    <script>
+        // JavaScript to handle dynamic actions
+        document.querySelectorAll('.delete-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const bookCard = button.closest('.book-card');
+                bookCard.remove(); // Remove book from DOM
+                alert('Book removed from watchlist.');
+            });
+        });
+
+        document.querySelector('.add-book-button').addEventListener('click', () => {
+            alert('Feature to add books coming soon!');
+        });
+    </script>
+</body>
+</html>

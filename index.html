@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreatReads</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header">
+            <div class="logo">
+                <img src="images/greatreadslogo.png" alt="Logo">
+            </div>
+
+            <!-- Search Bar in the Center -->
+            <div class="header-search">
+                <form action="/search" method="GET">
+                    <input type="text" name="query" placeholder="Search books or authors..." required>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+
+            <!-- Buttons on the right -->
+            <div class="header-actions">
+                <!-- Booklist Button -->
+                <a href="/booklist" class="booklist-button">
+                    <img src="images/bookmark.png" alt="Bookmark Icon" class="booklist-icon">
+                    Booklist
+                </a>
+                <!-- Sign In Button -->
+                <a href="/signin" class="signin-button">Sign In</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container">
+        <!-- Top 10 Books Carousel -->
+        <section id="top-books" class="carousel-section">
+            <h2>Top 10 Books</h2>
+            <div class="carousel">
+                <!-- Book Item 1 -->
+                <div class="carousel-item">
+                    <img src="images/book1.png" alt="Book 1">
+                    <div class="book-details">
+                        <h3>Book Title 1</h3>
+                        <p>Author: Jane Doe</p>
+                        <p>Rating: ⭐⭐⭐⭐☆</p>
+                    </div>
+                </div>
+                <!-- Book Item 2 -->
+                <div class="carousel-item">
+                    <img src="images/book2.png" alt="Book 2">
+                    <div class="book-details">
+                        <h3>Book Title 2</h3>
+                        <p>Author: John Smith</p>
+                        <p>Rating: ⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+                <!-- Book Item 3 -->
+                <div class="carousel-item">
+                    <img src="images/book3.png" alt="Book 3">
+                    <div class="book-details">
+                        <h3>Book Title 3</h3>
+                        <p>Author: Alice Brown</p>
+                        <p>Rating: ⭐⭐⭐⭐☆</p>
+                    </div>
+                </div>
+                <!-- Book Item 4 -->
+                <div class="carousel-item">
+                    <img src="images/book4.png" alt="Book 4">
+                    <div class="book-details">
+                        <h3>Book Title 4</h3>
+                        <p>Author: Bob Johnson</p>
+                        <p>Rating: ⭐⭐⭐☆</p>
+                    </div>
+                </div>
+                <!-- Book Item 5 -->
+                <div class="carousel-item">
+                    <img src="images/book5.png" alt="Book 5">
+                    <div class="book-details">
+                        <h3>Book Title 5</h3>
+                        <p>Author: Emily Clark</p>
+                        <p>Rating: ⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+                <!-- Book Item 6 -->
+                <div class="carousel-item">
+                    <img src="images/book6.png" alt="Book 6">
+                    <div class="book-details">
+                        <h3>Book Title 6</h3>
+                        <p>Author: David Lee</p>
+                        <p>Rating: ⭐⭐⭐⭐☆</p>
+                    </div>
+                </div>
+                <!-- Book Item 7 -->
+                <div class="carousel-item">
+                    <img src="images/book7.png" alt="Book 7">
+                    <div class="book-details">
+                        <h3>Book Title 7</h3>
+                        <p>Author: Michael Brown</p>
+                        <p>Rating: ⭐⭐⭐⭐☆</p>
+                    </div>
+                </div>
+                <!-- Book Item 8 -->
+                <div class="carousel-item">
+                    <img src="images/book8.png" alt="Book 8">
+                    <div class="book-details">
+                        <h3>Book Title 8</h3>
+                        <p>Author: Sarah Johnson</p>
+                        <p>Rating: ⭐⭐⭐☆</p>
+                    </div>
+                </div>
+                <!-- Book Item 9 -->
+                <div class="carousel-item">
+                    <img src="images/book9.png" alt="Book 9">
+                    <div class="book-details">
+                        <h3>Book Title 9</h3>
+                        <p>Author: Chris White</p>
+                        <p>Rating: ⭐⭐⭐⭐☆</p>
+                    </div>
+                </div>
+                <!-- Book Item 10 -->
+                <div class="carousel-item">
+                    <img src="images/book10.png" alt="Book 10">
+                    <div class="book-details">
+                        <h3>Book Title 10</h3>
+                        <p>Author: Anna Green</p>
+                        <p>Rating: ⭐⭐⭐⭐☆</p>
+                    </div>
+                </div>
+            </div>
+        </section>        
+
+       <!-- Book of the Day Section -->
+<section id="book-of-the-day" class="card">
+    <h2>Book of the Day</h2>
+    <div class="book-of-the-day-content">
+        <div class="bookcover">
+            <img src="images/featuredcover.png" alt="Featured Cover">
+        </div>
+        <div class="book-info">
+            <h3 class="book-title">The Great Book</h3>
+            <p class="book-author">by John Doe</p>
+            <p class="book-synopsis">
+                This is an engaging synopsis about the book. It provides an overview of the story, highlights key themes, and leaves the reader intrigued enough to dive into the full narrative.
+            </p>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer style="text-align: center;">
+        <p>&copy; 2024 GreatReads | Discover Your Next Favorite Book</p>
+    </footer>
+
+    <!-- JavaScript for Carousel -->
+    <script src="script.js"></script>
+</body>
+</html>

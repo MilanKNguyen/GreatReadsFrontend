@@ -1,0 +1,560 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #162d43;
+}
+
+h2 {
+    margin: 20px;
+    font-size: 40px;
+}
+
+p {
+    margin: 20px
+}
+
+/* Header Section */
+.header {
+    background-color: #b4c4cc;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+.header-search {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+}
+
+.header-search form {
+    display: flex;
+    width: 100%;
+    max-width: 950px;
+}
+
+.header-search input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.header-search button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #162d43;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.header-search button:hover {
+    background-color: #a3b1b9;
+}
+
+.header-actions {
+    margin-top: -3px;
+}
+
+.header-booklist {
+    display: flex;
+}
+
+.booklist-button {
+    /* gap: 10px; */
+    color: #162d43;
+    padding: 8px 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.booklist-button:hover {
+    background-color: #a3b1b9;
+}
+
+.booklist-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.signin-button {
+    gap: 10px;
+    color: #162d43;
+    padding: 8px 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.signin-button:hover {
+    background-color: #a3b1b9;
+}
+
+/* Carousel Section */
+.carousel-section {
+    overflow-x: auto; /* Horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks */
+    padding: 20px 0;
+}
+
+.carousel {
+    display: flex; /* Arrange items in a single row */
+    gap: 20px; /* Space between books */
+    overflow-x: auto; /* Horizontal scroll */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    padding-bottom: 10px;
+}
+
+.carousel::-webkit-scrollbar {
+    height: 8px; /* Adjust scrollbar height */
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+.carousel::-webkit-scrollbar-track {
+    background: #f4f4f9; /* Track background */
+}
+
+/* Carousel Item */
+.carousel-item {
+    position: relative;
+    width: 160px; /* Width of each book */
+    height: 240px; /* Maintain 2:3 aspect ratio */
+    overflow: hidden;
+    border-radius: 5px;
+    flex: 0 0 auto; /* Prevent shrinking */
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.carousel-item img {
+    width: 100%; /* Image fills the item */
+    height: 100%; /* Image fills the item */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+/* Hover Details */
+.carousel-item .book-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.carousel-item:hover .book-details {
+    opacity: 1; /* Show details on hover */
+}
+
+.carousel-item .book-details h3 {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.carousel-item .book-details p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+
+
+/* Book of the Day Section */
+#book-of-the-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px 50px 0px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-of-the-day-content {
+    display: flex;
+    flex-direction: row; /* Arrange items horizontally */
+    gap: 20px; /* Space between the book cover and the info */
+    align-items: flex-start; /* Align content to the top */
+    width: 100%;
+    max-width: 800px; /* Limit overall width for aesthetics */
+}
+
+.bookcover {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 400px;
+    background-color: #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-info {
+    flex: 1; /* Allow book info to take the remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.book-title {
+    font-size: 1.8rem;
+    margin: 0px 0px 0px 15px;
+    color: #333;
+}
+
+.book-author {
+    font-size: 1rem;
+    margin: 0 0 0 20px;
+    color: #777;
+}
+
+.book-synopsis {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Login Page Styles */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+}
+
+.login-container {
+    background-color: #b4c4cc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-logo img {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #162d43;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    width: 94.75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.login-button {
+    background-color: #162d43;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #a3b1b9;
+}
+
+.login-links {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.login-links a {
+    color: #162d43;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+.forgot-password-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.forgot-password-container {
+    text-align: center;
+    background: #b4c4cc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+.forgot-password-logo img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.not-implemented-message p {
+    color: #162d43;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.forgot-password-links a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.show-password {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+    gap: 8px; /* Add spacing between checkbox and label */
+}
+
+.show-password input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.show-password label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection when clicking */
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Watchlist Wrapper */
+.watchlist-wrapper {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.watchlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.watchlist-header h1 {
+    font-size: 24px;
+    color: #333;
+}
+/* Container for the buttons */
+.header-buttons {
+    display: flex;
+    gap: 20px; /* Adds space between Add and Edit buttons */
+    margin-top: 20px; /* Space above the buttons */
+}
+
+/* Add Book Button */
+.add-book-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-book-button:hover {
+    background-color: #0056b3;
+}
+
+/* Edit Book Button */
+.edit-book-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-book-button:hover {
+    background-color: #1c7c31;
+}
+
+/* Grid Layout */
+.watchlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); /* Larger book covers */
+    gap: 30px; /* Increased space between books */
+    margin: 0 auto; /* Center the grid */
+    padding: 20px;
+}
+
+/* Book Card */
+.book-card {
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+    width: 160px; /* Adjusted width */
+    height: 240px; /* Adjusted height for 2:3 aspect ratio */
+    padding: 0;
+    border: none;
+}
+
+/* Book Image */
+.book-card img {
+    width: 100%; /* Image fills the card's width */
+    height: 100%; /* Image fills the card's height */
+    object-fit: cover; /* Ensure the image scales proportionally */
+    display: block; /* Prevent inline gaps */
+}
+
+/* Book Details (Hidden by Default) */
+.book-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s;
+}
+
+/* Show details on hover */
+.book-card:hover .book-details {
+    opacity: 1; /* Show details on hover */
+}
+
+
+.book-details h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.book-details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Book Actions */
+.book-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.book-actions button {
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.book-actions .delete-button {
+    background-color: #dc3545;
+}
+
+.book-actions .delete-button:hover {
+    background-color: #a71d2a;
+}
+
+.book-actions .details-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .watchlist-grid {
+        grid-template-columns: 1fr; /* One column for smaller screens */
+    }
+}

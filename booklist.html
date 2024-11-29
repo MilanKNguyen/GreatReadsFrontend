@@ -5,7 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booklist - GreatReads</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+</head>    
+<style>
+    /* Modal styles */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 40%;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+
+    .close {
+        position: absolute;
+        top: 1px;
+        right: 4px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #a3b1b9;
+        cursor: pointer;
+    }
+
+    .close:hover, .close:focus {
+        color: #162d43;
+        text-decoration: none;
+    }
+
+    .modal-search-bar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .modal-search-bar input {
+        flex: 1;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .modal-search-bar button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        background-color: #162d43;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .modal-search-bar button:hover {
+        background-color: #a3b1b9;
+    }
+
+    .dropdown {
+        max-height: 150px;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        display: none; /* Hidden by default */
+        position: relative;
+        background-color: white;
+        list-style: none;
+        padding: 0;
+
+        margin: 10px 0px 0px 0px;
+        border-radius: 4px;
+    }
+
+    .dropdown li {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .dropdown li:hover {
+        background-color: #f0f0f0;
+    }
+
+.dropdown::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    height: 8px; /* Height for horizontal scrollbar if needed */
+}
+
+.dropdown::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Background color of the scrollbar track */
+    border-radius: 10px;
+}
+
+.dropdown::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the scrollbar handle */
+    border-radius: 10px; /* Rounds the edges of the scrollbar handle */
+    border: 2px solid #f0f0f0; /* Space between the track and handle */
+}
+
+.dropdown::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker color on hover for better visibility */
+}
+
+    /* Trashcan icon */
+    .trashcan {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        display: none; /* Hidden by default */
+    }
+
+    .trashcan img {
+        width: 20px;
+        height: 20px;
+        filter: invert(12%) sepia(98%) saturate(6405%) hue-rotate(357deg) brightness(75%) contrast(120%);
+    }
+
+    /* Show trashcan on hover */
+    .book-card:hover .trashcan {
+        display: flex;
+    }
+
+</style>
 <body>
     <!-- Header Section -->
     <header>
@@ -55,6 +186,10 @@
                     <p>Author: Jane Doe</p>
                     <p>Rating: ⭐⭐⭐⭐☆</p>
                 </div>
+                 <!-- Trashcan Icon -->
+    <div class="trashcan">
+        <img src="images/trashcan.png" alt="Trashcan Icon">
+    </div>
             </div>
             <div class="book-card">
                 <img src="images/book2.jpg" alt="Book Cover 2">
@@ -63,6 +198,10 @@
                     <p>Author: John Smith</p>
                     <p>Rating: ⭐⭐⭐⭐⭐</p>
                 </div>
+                 <!-- Trashcan Icon -->
+    <div class="trashcan">
+        <img src="images/trashcan.png" alt="Trashcan Icon">
+    </div>
             </div>
             <div class="book-card">
                 <img src="images/book3.jpg" alt="Book Cover 3">
@@ -71,6 +210,10 @@
                     <p>Author: Alice Brown</p>
                     <p>Rating: ⭐⭐⭐⭐☆</p>
                 </div>
+                 <!-- Trashcan Icon -->
+    <div class="trashcan">
+        <img src="images/trashcan.png" alt="Trashcan Icon">
+    </div>
             </div>
             <div class="book-card">
                 <img src="images/book4.jpg" alt="Book Cover 4">
@@ -79,6 +222,10 @@
                     <p>Author: Bob Johnson</p>
                     <p>Rating: ⭐⭐⭐☆</p>
                 </div>
+                 <!-- Trashcan Icon -->
+    <div class="trashcan">
+        <img src="images/trashcan.png" alt="Trashcan Icon">
+    </div>
             </div>
             <div class="book-card">
                 <img src="images/book5.jpg" alt="Book Cover 5">
@@ -87,6 +234,10 @@
                     <p>Author: Emily Clark</p>
                     <p>Rating: ⭐⭐⭐⭐⭐</p>
                 </div>
+                 <!-- Trashcan Icon -->
+    <div class="trashcan">
+        <img src="images/trashcan.png" alt="Trashcan Icon">
+    </div>
             </div>
             <div class="book-card">
                 <img src="images/book6.jpg" alt="Book Cover 6">
@@ -95,6 +246,10 @@
                     <p>Author: David Lee</p>
                     <p>Rating: ⭐⭐⭐⭐☆</p>
                 </div>
+                 <!-- Trashcan Icon -->
+    <div class="trashcan">
+        <img src="images/trashcan.png" alt="Trashcan Icon">
+    </div>
             </div>
             <div class="book-card">
                 <img src="images/book7.jpg" alt="Book Cover 7">
@@ -103,6 +258,10 @@
                     <p>Author: Michael Brown</p>
                     <p>Rating: ⭐⭐⭐⭐☆</p>
                 </div>
+                 <!-- Trashcan Icon -->
+    <div class="trashcan">
+        <img src="images/trashcan.png" alt="Trashcan Icon">
+    </div>
             </div>
             <div class="book-card">
                 <img src="images/book8.jpg" alt="Book Cover 8">
@@ -111,6 +270,10 @@
                     <p>Author: Sarah Johnson</p>
                     <p>Rating: ⭐⭐⭐☆</p>
                 </div>
+                 <!-- Trashcan Icon -->
+    <div class="trashcan">
+        <img src="images/trashcan.png" alt="Trashcan Icon">
+    </div>
             </div>
             <div class="book-card">
                 <img src="images/book9.jpg" alt="Book Cover 9">
@@ -119,6 +282,10 @@
                     <p>Author: Chris White</p>
                     <p>Rating: ⭐⭐⭐⭐☆</p>
                 </div>
+                 <!-- Trashcan Icon -->
+    <div class="trashcan">
+        <img src="images/trashcan.png" alt="Trashcan Icon">
+    </div>
             </div>
             <div class="book-card">
                 <img src="images/book10.jpg" alt="Book Cover 10">
@@ -127,22 +294,113 @@
                     <p>Author: Anna Green</p>
                     <p>Rating: ⭐⭐⭐⭐☆</p>
                 </div>
+                 <!-- Trashcan Icon -->
+    <div class="trashcan">
+        <img src="images/trashcan.png" alt="Trashcan Icon">
+    </div>
             </div>
         </div>    
+ <!-- Modal for Adding Books -->
+ <div id="addBookModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-search-bar">
+            <input type="text" id="bookSearchInput" placeholder="Search for books..." autocomplete="off">
+            <button id="searchAddButton">Add</button>
+        </div>
+        <ul class="dropdown" id="searchResults"></ul>
+    </div>
+</div>
 
-    <script>
-        // JavaScript to handle dynamic actions
-        document.querySelectorAll('.delete-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const bookCard = button.closest('.book-card');
-                bookCard.remove(); // Remove book from DOM
-                alert('Book removed from watchlist.');
+<script>
+    // Modal Logic
+    const modal = document.getElementById('addBookModal');
+    const addBookButton = document.querySelector('.add-book-button');
+    const closeModal = document.querySelector('.close');
+    const searchInput = document.getElementById('bookSearchInput');
+    const searchResults = document.getElementById('searchResults');
+    const searchAddButton = document.getElementById('searchAddButton');
+    const booklistGrid = document.getElementById('booklist-grid');
+
+    // Open modal
+    addBookButton.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
+
+    // Close modal
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Fake API search (replace with actual API call)
+    const books = [
+        { title: 'Book Title 1', author: 'Jane Doe', rating: '⭐⭐⭐⭐☆' },
+        { title: 'Book Title 2', author: 'John Smith', rating: '⭐⭐⭐⭐⭐' },
+        { title: 'Book Title 3', author: 'Alice Brown', rating: '⭐⭐⭐⭐☆' },
+        { title: 'Book Title 4', author: 'Bob Johnson', rating: '⭐⭐⭐☆' },
+        { title: 'Book Title 5', author: 'Emily Clark', rating: '⭐⭐⭐⭐⭐' }
+    ];
+
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase();
+        searchResults.innerHTML = '';
+        if (query) {
+            const filteredBooks = books.filter(book =>
+                book.title.toLowerCase().includes(query) ||
+                book.author.toLowerCase().includes(query)
+            );
+            searchResults.style.display = 'block';
+            filteredBooks.forEach(book => {
+                const li = document.createElement('li');
+                li.textContent = `${book.title} by ${book.author}`;
+                li.addEventListener('click', () => {
+                    addBookToBooklist(book);
+                    searchResults.style.display = 'none';
+                    searchInput.value = '';
+                });
+                searchResults.appendChild(li);
             });
-        });
+        } else {
+            searchResults.style.display = 'none';
+        }
+    });
 
-        document.querySelector('.add-book-button').addEventListener('click', () => {
-            alert('Feature to add books coming soon!');
-        });
-    </script>
+    // Add button click event
+    searchAddButton.addEventListener('click', () => {
+        const firstBook = books[0]; // Example: Add the first search result for simplicity
+        addBookToBooklist(firstBook);
+        modal.style.display = 'none';
+    });
+
+    function addBookToBooklist(book) {
+        const bookCard = document.createElement('div');
+        bookCard.classList.add('book-card');
+        bookCard.innerHTML = `
+            <img src="images/default-book.jpg" alt="${book.title}">
+            <div class="book-details">
+                <h3>${book.title}</h3>
+                <p>Author: ${book.author}</p>
+                <p>Rating: ${book.rating}</p>
+            </div>
+        `;
+        booklistGrid.appendChild(bookCard);
+    }
+
+     // Add event listeners for trashcan icons
+     document.addEventListener('click', (event) => {
+        if (event.target.closest('.trashcan')) {
+            const bookCard = event.target.closest('.book-card');
+            bookCard.remove(); // Remove the book card from the DOM
+        }
+    });
+</script>
+
 </body>
 </html>

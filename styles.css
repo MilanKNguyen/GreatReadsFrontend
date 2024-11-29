@@ -213,17 +213,42 @@ header .logo img {
     max-width: 800px; /* Limit overall width for aesthetics */
 }
 
-.bookcover {
-    flex: 0 0 auto;
-    width: 300px;
-    height: 400px;
-    background-color: #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Book Cover and Button Container */
+.book-cover {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
+
+.book-cover img {
+    width: 200px;
+    height: 300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Add to Watchlist Button */
+.watchlist-button-container {
+    text-align: center;
+}
+
+.watchlist-button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #162d43; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.watchlist-button:hover {
+    background-color: #a3b1b9; /* Darker green on hover */
+}
+
 
 .book-info {
     flex: 1; /* Allow book info to take the remaining space */

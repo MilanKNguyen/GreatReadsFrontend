@@ -117,7 +117,7 @@ header .logo img {
 .carousel-section {
     overflow-x: auto; /* Horizontal scrolling */
     white-space: nowrap; /* Prevent line breaks */
-    padding: 20px 0;
+    padding: 60px 20px 20px 20px;
 }
 
 .carousel {
@@ -148,7 +148,7 @@ header .logo img {
     height: 240px; /* Maintain 2:3 aspect ratio */
     overflow: hidden;
     border-radius: 5px;
-    flex: 0 0 auto; /* Prevent shrinking */
+    flex: 0 0 auto; 
     transition: transform 0.3s ease-in-out;
 }
 
@@ -205,8 +205,6 @@ header .logo img {
     align-items: center;
     padding: 20px 0px 50px 0px;
     background-color: #f4f4f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .book-of-the-day-content {
@@ -216,6 +214,14 @@ header .logo img {
     align-items: flex-start; /* Align content to the top */
     width: 100%;
     max-width: 800px; /* Limit overall width for aesthetics */
+}
+
+footer {
+    background-color: #162d43;
+    color: white;
+    padding: 1px 10px;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Light shadow at the top */
 }
 
 /* Book Cover and Button Container */
@@ -427,8 +433,9 @@ header .logo img {
 
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f4f4f9;
+    color: #162d43;
     margin: 0;
     padding: 0;
 }

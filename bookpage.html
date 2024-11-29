@@ -3,215 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Details - GreatReads</title>
+    <title>Booklist - GreatReads</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #162d43;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .book-header {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            margin-bottom: 40px;
-        }
-
-        .book-cover {
-            width: 300px;
-            height: 450px;
-            background-color: #ddd;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .book-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-
-        .book-details {
-            flex: 1;
-        }
-
-        .book-title {
-            font-size: 2.5rem;
-            margin: 0 0 10px;
-        }
-
-        .book-author {
-            font-size: 1.5rem;
-            color: #777;
-            margin-bottom: 15px;
-        }
-
-        .book-rating {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-
-        .book-rating span {
-            color: #ffa500;
-        }
-
-        .book-publication-info {
-            font-size: 1rem;
-            color: #444;
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-
-        .book-synopsis {
-            line-height: 1.8;
-            font-size: 1.1rem;
-            color: #444;
-            margin-bottom: 30px;
-        }
-
-        .genres {
-            margin: 10px 0;
-            font-size: 1.1rem;
-            color: #333;
-        }
-
-        .genres span {
-            background-color: #007bff;
-            color: #fff;
-            padding: 5px 10px;
-            margin-right: 5px;
-            border-radius: 15px;
-            font-size: 0.9rem;
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-
-        .action-buttons button {
-            padding: 10px 20px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .action-buttons .add-to-list {
-            background-color: #007bff;
-        }
-
-        .action-buttons .add-to-list:hover {
-            background-color: #0056b3;
-        }
-
-        .action-buttons .edit-book {
-            background-color: #28a745;
-        }
-
-        .action-buttons .edit-book:hover {
-            background-color: #1c7c31;
-        }
-
-        .reviews-section {
-            margin-top: 50px;
-        }
-
-        .reviews-section h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-        }
-
-        .review {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        .review h4 {
-            margin: 0 0 10px;
-            font-size: 1.2rem;
-        }
-
-        .review p {
-            margin: 0;
-            line-height: 1.6;
-        }
-    </style>
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <div class="container">
-            <h1>Book Details - GreatReads</h1>
-        </div>
-    </header>
-    <main>
-        <div class="container">
-            <!-- Book Header -->
-            <div class="book-header">
-                <div class="book-cover">
-                    <img src="images/book-cover.jpg" alt="Book Cover">
-                </div>
-                <div class="book-details">
-                    <h2 class="book-title">The Great Book</h2>
-                    <p class="book-author">by John Doe</p>
-                    <p class="book-rating">Rating: <span>⭐⭐⭐⭐⭐</span></p>
-                    <p class="book-publication-info">
-                        <strong>Published:</strong> 2023 <br>
-                        <strong>Publisher:</strong> GreatReads Publishing <br>
-                        <strong>Genres:</strong> Fiction, Adventure <br>
-                        <strong>Edition Language:</strong> English <br>
-                        <strong>Pages:</strong> 350
-                    </p>
-                    <div class="genres">
-                        <span>Fiction</span>
-                        <span>Adventure</span>
-                        <span>Fantasy</span>
-                    </div>
-                    <p class="book-synopsis">
-                        This is a detailed synopsis about the book. It provides an overview of the story, highlights key
-                        themes, and leaves the reader intrigued enough to dive into the full narrative. A must-read for
-                        fans of thrilling, immersive stories.
-                    </p>
-                    <div class="action-buttons">
-                        <button class="add-to-list">+ Add to List</button>
-                        <button class="edit-book">✏️ Edit Book</button>
-                    </div>
-                </div>
+        <div class="header">
+            <div class="logo">
+                <img src="images/greatreadslogo.png" alt="Logo">
             </div>
 
-            <!-- Reviews Section -->
-            <div class="reviews-section">
-                <h3>Reviews</h3>
-                <div class="review">
-                    <h4>Reviewer Name</h4>
-                    <p>This book is absolutely amazing. The characters are well-developed, and the story is gripping
-                        from start to finish.</p>
-                </div>
-                <div class="review">
-                    <h4>Reviewer Name</h4>
-                    <p>An excellent read! I couldn't put it down and highly recommend it to everyone.</p>
-                </div>
+            <!-- Search Bar in the Center -->
+            <div class="header-search">
+                <form action="/search" method="GET">
+                    <input type="text" name="query" placeholder="Search books or authors..." required>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+
+            <!-- Buttons on the right -->
+            <div class="header-actions">
+                <a href="/booklist" class="booklist-button">
+                    <img src="images/bookmark.png" alt="Bookmark Icon" class="booklist-icon">
+                    Booklist
+                </a>
+                <a href="/signin" class="signin-button">Sign In</a>
             </div>
         </div>
-    </main>
-</body>
-</html>
+    </header>
+
+        <!-- Main Content Section -->
+        <main>
+            <div class="book-details-container">
+                <!-- Book Cover -->
+                <div class="book-cover">
+                    <img src="https://via.placeholder.com/200x300" alt="Book Cover">
+                </div>
+    
+                <!-- Book Information -->
+                <div class="book-info">
+                    <h1 class="book-title">Some We Love, Some We Hate, Some We Eat</h1>
+                    <p class="book-author">by <strong>Hal Herzog</strong></p>
+    
+                    <!-- Rating Section -->
+                    <div class="book-rating">
+                        <span>⭐⭐⭐⭐☆</span> 3.87
+                    </div>
+    
+                    <!-- Synopsis -->
+                    <p class="book-synopsis">
+                        Combining the intellect of Malcolm Gladwell with the irreverent humor of Mary Roach,
+                        this book explores our paradoxical relationships with animals.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </body>
